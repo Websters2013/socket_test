@@ -35,7 +35,7 @@ export class WebSocketService {
                     this.message.next( data );
                 }
             },
-            error: (err:Object) => {
+            error: () => {
 
                 self.opened.next( false );
                 self.started = false;

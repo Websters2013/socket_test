@@ -2,5 +2,18 @@
 <!-- site -->
 <div class="site">
     <h1>My First Angular 2 App</h1>
+
+    <form #chatForm="ngForm" novalidate (submit)="submit()">
+
+        <input id="message" type="text" name="message"
+               [(ngModel)]="newMessage"
+               #message="ngModel"
+               required
+               autocomplete="off">
+
+        <button type="submit" class="btn" [disabled]="chatForm.invalid">Send</button>
+
+
+    </form>
 </div>
 <!-- /site -->
