@@ -128,7 +128,6 @@ export class ChannelWebsocketService {
     }
 
     private subscribe(){
-        this.identifier[ 'token' ] = window.localStorage.getItem( 'auth_token' );
         this.websocketService.sendMessage( this.getSubscribeString() );
     }
 

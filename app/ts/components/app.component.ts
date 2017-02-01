@@ -1,5 +1,7 @@
-import { Component }         from '@angular/core';
-import { WebSocketService }  from "../services/websocket.service";
+import { Component }          from '@angular/core';
+
+import { WebSocketService }    from "../services/websocket.service";
+import { ChatChannelService }  from "../services/chat.channel.service";
 @Component({
     selector: 'my-app',
     templateUrl: 'app/templates/app.component.html',
@@ -7,7 +9,8 @@ import { WebSocketService }  from "../services/websocket.service";
 })
 export class AppComponent {
 
-    constructor( private webSocketService:WebSocketService ){
+    constructor( private webSocketService:WebSocketService,
+                 private chatChannelService:ChatChannelService ){
 
         this.webSocketService.start();
 
